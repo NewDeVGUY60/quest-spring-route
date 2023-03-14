@@ -15,7 +15,7 @@ public class DoctorController {
     @ResponseBody
     public Doctor doctor(@PathVariable int number) {
         
-        if (number > 0 && number < 12) {
+        if (number > 0 && number <= 12) {
             throw new ResponseStatusException(HttpStatus.SEE_OTHER, "Try to see other Doctor !");
         }
         if(number == 13){
